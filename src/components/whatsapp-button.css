@@ -1,0 +1,37 @@
+.whatsapp-btn {
+  position: fixed;
+  right: max(1.25rem, env(safe-area-inset-right));
+  bottom: max(1.25rem, env(safe-area-inset-bottom));
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--color-black);
+  color: var(--color-white);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.6rem 0.85rem;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 2px;
+  transition: background-color 0.25s ease;
+  animation: whatsapp-btn-pulse 2.2s ease-in-out infinite;
+}
+.whatsapp-btn:hover {
+  background: var(--color-brown);
+}
+
+@keyframes whatsapp-btn-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.55);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+  }
+}
+
+@media (min-width: 768px) {
+  .whatsapp-btn {
+    padding: 0.7rem;
+  }
+}

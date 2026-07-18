@@ -1,0 +1,68 @@
+import { lazy, Suspense, useRef, useState } from 'react'
+import { Reveal } from './Reveal'
+import { selectedWorks } from '../data/content'
+import './selected-works.css'
+
+const ReelModal = lazy(() => import('./ReelModal').then((m) => ({ default: m.ReelModal })))
+
+export function SelectedWorks() {
+  const [activeReel, setActiveReel] = useState<string | null>(null)
+  const videoRefs = useRef<Array<HTMLVideoElement | null>>([])
+
+  return (
+    <section id="trabalhos" className="works section" aria-label="Trabalhos selecionados">
+      <div className="container">
+        <Reveal className="works__header">
+          <p className="eyebrow works__eyebrow">{selectedWorks.eyebrow}</p>
+          <h2 className="works__title">
+            {selectedWorks.titleLine} <em>{selectedWorks.emphasisWord}</em>
+          </h2>
+          {selectedWorks.subtext && <p className="works__subtext">{selectedWorks.subtext}</p>}
+        </Reveal>
+
+        <div className="works__grid">
+          {selectedWorks.items.map((work, i) => (
+            <Reveal
+              key={work.id}
+              delay={i * 0.08}
+              className={`works__item works__item--${work.layout}`}
+            >
+              <button
+                className="works__media-btn"
+                onClick={() => {
+                  videoRefs.current[i]?.pause()
+                  setActiveReel(work.video)
+                }}
+                aria-label="Assistir vídeo em tela maior, com som"
+              >
+                <span className="aspect-box works__aspect">
+                  <video
+                    ref={(el) => {
+                      videoRefs.current[i] = el
+                    }}
+                    className="works__video"
+                    src={work.video}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                    aria-hidden="true"
+                  />
+                  <span className="works__scrim" aria-hidden="true" />
+                  <span className="works__play" aria-hidden="true" />
+                </span>
+              </button>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+
+      {activeReel && (
+        <Suspense fallback={null}>
+          <ReelModal src={activeReel} onClose={() => setActiveReel(null)} />
+        </Suspense>
+      )}
+    </section>
+  )
+}

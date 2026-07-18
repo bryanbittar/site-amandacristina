@@ -1,0 +1,180 @@
+:root {
+  --color-black: #0B0B0A;
+  --color-ivory: #F2EFE8;
+  --color-white: #FAF9F6;
+  --color-warmgray: #AAA69E;
+  --color-brown: #3B3029;
+  --color-gold: #A68159;
+
+  --font-display: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --max-width: 1400px;
+  --edge: clamp(1.25rem, 5vw, 4.5rem);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--color-ivory);
+  color: var(--color-black);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img, video {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+em, .italic {
+  font-style: italic;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--edge);
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-brown);
+}
+
+.eyebrow--light {
+  color: var(--color-warmgray);
+}
+
+.hairline {
+  border: none;
+  border-top: 1px solid rgba(170, 166, 158, 0.35);
+}
+
+.section {
+  padding: clamp(4rem, 10vw, 8rem) 0;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  padding: 0.95em 1.8em;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  min-height: 44px;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background: var(--color-black);
+  color: var(--color-ivory);
+  border-color: var(--color-black);
+}
+.btn--primary:hover {
+  background: transparent;
+  color: var(--color-black);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--color-black);
+  border-color: var(--color-black);
+}
+.btn--outline:hover {
+  background: var(--color-black);
+  color: var(--color-ivory);
+}
+
+.btn--outline-light {
+  background: transparent;
+  color: var(--color-ivory);
+  border-color: var(--color-ivory);
+}
+.btn--outline-light:hover {
+  background: var(--color-ivory);
+  color: var(--color-black);
+}
+
+.btn--gold-line {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.aspect-box {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: var(--color-brown);
+}
+.aspect-box img,
+.aspect-box video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

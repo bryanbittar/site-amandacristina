@@ -1,0 +1,140 @@
+.about {
+  background: var(--color-black);
+  color: var(--color-ivory);
+  padding-top: 2.4rem;
+}
+
+@media (min-width: 900px) {
+  .about {
+    padding-top: clamp(12rem, 28vw, 22rem);
+  }
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+.about__portrait {
+  aspect-ratio: 3 / 4;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.about__media {
+  order: 2;
+}
+
+.about__text {
+  order: 1;
+}
+
+@media (min-width: 900px) {
+  .about__media,
+  .about__text {
+    order: initial;
+  }
+}
+
+.about__eyebrow {
+  color: var(--color-gold);
+}
+
+.about__title {
+  margin-top: 1rem;
+  font-size: clamp(1.8rem, 3.8vw, 2.7rem);
+  line-height: 1.18;
+  max-width: 22ch;
+  color: var(--color-ivory);
+}
+
+.about__title em {
+  color: var(--color-gold);
+  font-style: italic;
+}
+
+.about__paragraph {
+  margin-top: 1.4rem;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-warmgray);
+  max-width: 56ch;
+}
+
+.about__badges {
+  margin-top: 2.25rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.9rem;
+  max-width: 44ch;
+}
+
+.about__badge {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(242, 239, 232, 0.14);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: var(--color-ivory);
+}
+
+.about__badge-icon {
+  display: inline-flex;
+  color: var(--color-gold);
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+.about__badge-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.about__divider {
+  margin-top: 2.25rem;
+  margin-bottom: 1.5rem;
+  border-color: rgba(242, 239, 232, 0.14);
+}
+
+.about__cta {
+  background: var(--color-gold);
+  color: var(--color-white);
+  border-color: var(--color-gold);
+  animation: about-cta-pulse 2.2s ease-in-out infinite;
+}
+.about__cta:hover {
+  background: var(--color-white);
+  color: var(--color-gold);
+}
+
+@keyframes about-cta-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(166, 129, 89, 0.55);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(166, 129, 89, 0);
+  }
+}
+
+.about__signature {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-warmgray);
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 900px) {
+  .about__grid {
+    grid-template-columns: 45% 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+}
