@@ -28,15 +28,6 @@ export function Hero() {
       </div>
 
       <div className="hero__content container">
-        <motion.p
-          className="eyebrow eyebrow--light hero__kicker"
-          initial={reducedMotion ? { opacity: 0 } : { opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          Storymaker &amp; Videomaker Mobile
-        </motion.p>
-
         <motion.h1
           className="hero__title"
           initial={reducedMotion ? { opacity: 0 } : { opacity: 0, y: 20 }}

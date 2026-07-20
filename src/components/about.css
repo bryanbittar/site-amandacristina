@@ -1,6 +1,6 @@
 .about {
-  background: var(--color-black);
-  color: var(--color-ivory);
+  background: var(--color-pink);
+  color: var(--color-black);
   padding-top: 2.4rem;
 }
 
@@ -46,7 +46,7 @@
   font-size: clamp(1.8rem, 3.8vw, 2.7rem);
   line-height: 1.18;
   max-width: 22ch;
-  color: var(--color-ivory);
+  color: var(--color-black);
 }
 
 .about__title em {
@@ -75,10 +75,10 @@
   align-items: center;
   gap: 0.65rem;
   padding: 0.8rem 1rem;
-  border: 1px solid rgba(242, 239, 232, 0.14);
+  border: 1px solid rgba(66, 66, 66, 0.18);
   border-radius: 6px;
   font-size: 0.85rem;
-  color: var(--color-ivory);
+  color: var(--color-black);
 }
 
 .about__badge-icon {
@@ -96,7 +96,7 @@
 .about__divider {
   margin-top: 2.25rem;
   margin-bottom: 1.5rem;
-  border-color: rgba(242, 239, 232, 0.14);
+  border-color: rgba(66, 66, 66, 0.18);
 }
 
 .about__cta {

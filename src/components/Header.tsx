@@ -15,7 +15,7 @@ export function Header() {
     <header className={`site-header ${scrolled ? 'site-header--scrolled' : ''}`}>
       <div className="site-header__bar">
         <a href="#inicio" className="site-header__logo" aria-label="Amanda Cristina Storymaker">
-          <img src="/media/logo.png" alt="Amanda Cristina Storymaker" />
+          <img src="/media/logo-pink.png" alt="Amanda Cristina Storymaker" />
         </a>
       </div>
     </header>

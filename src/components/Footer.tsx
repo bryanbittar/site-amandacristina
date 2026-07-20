@@ -7,7 +7,7 @@ export function Footer() {
       <div className="container site-footer__grid">
         <div className="site-footer__brand">
           <img
-            src="/media/logo.png"
+            src="/media/logo-pink.png"
             alt="Amanda Cristina Storymaker"
             className="site-footer__logo"
           />

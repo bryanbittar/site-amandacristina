@@ -1,13 +1,14 @@
 :root {
-  --color-black: #0B0B0A;
-  --color-ivory: #F2EFE8;
-  --color-white: #FAF9F6;
-  --color-warmgray: #AAA69E;
-  --color-brown: #3B3029;
-  --color-gold: #A68159;
+  --color-black: #424242;
+  --color-ivory: #FBF1EE;
+  --color-white: #FFFFFF;
+  --color-pink: #E2B5B5;
+  --color-warmgray: #8B6355;
+  --color-brown: #A26A4D;
+  --color-gold: #A26A4D;
 
-  --font-display: 'Instrument Serif', Georgia, 'Times New Roman', serif;
-  --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
 
   --max-width: 1400px;
   --edge: clamp(1.25rem, 5vw, 4.5rem);
@@ -59,7 +60,7 @@ button {
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: -0.01em;
 }
 

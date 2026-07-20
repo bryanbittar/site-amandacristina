@@ -87,7 +87,8 @@
   font-size: 0.7rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--color-warmgray);
+  color: var(--color-ivory);
+  opacity: 0.75;
 }
 
 .hero__ctas {

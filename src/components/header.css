@@ -31,7 +31,6 @@
 .site-header__logo img {
   height: 84px;
   width: auto;
-  filter: brightness(0) invert(1);
 }
 
 @media (min-width: 768px) {

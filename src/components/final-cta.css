@@ -1,7 +1,7 @@
 .final-cta {
   position: relative;
-  background: var(--color-black);
-  color: var(--color-ivory);
+  background: var(--color-pink);
+  color: var(--color-black);
   overflow: hidden;
   padding: clamp(5rem, 14vw, 8rem) 0;
 }
@@ -10,7 +10,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center, rgba(166, 129, 89, 0.1) 0%, rgba(11, 11, 10, 0) 70%);
+  background: radial-gradient(ellipse at center, rgba(162, 106, 77, 0.16) 0%, rgba(226, 181, 181, 0) 70%);
 }
 
 .final-cta__content {
