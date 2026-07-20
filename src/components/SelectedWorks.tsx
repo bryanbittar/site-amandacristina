@@ -1,7 +1,8 @@
 import { lazy, Suspense, useRef, useState } from 'react'
 import { Reveal } from './Reveal'
-import { selectedWorks } from '../data/content'
+import { selectedWorks, services } from '../data/content'
 import './selected-works.css'
+import './services.css'
 
 const ReelModal = lazy(() => import('./ReelModal').then((m) => ({ default: m.ReelModal })))
 
@@ -12,13 +13,21 @@ export function SelectedWorks() {
   return (
     <section id="trabalhos" className="works section" aria-label="Trabalhos selecionados">
       <div className="container">
-        <Reveal className="works__header">
-          <p className="eyebrow works__eyebrow">{selectedWorks.eyebrow}</p>
-          <h2 className="works__title">
-            {selectedWorks.titleLine} <em>{selectedWorks.emphasisWord}</em>
-          </h2>
-          {selectedWorks.subtext && <p className="works__subtext">{selectedWorks.subtext}</p>}
+        <Reveal className="services__header">
+          <p className="eyebrow services__eyebrow">SERVIÇOS</p>
+          <h2 className="services__title">{services.title}</h2>
         </Reveal>
+
+        <div className="services__list">
+          {services.items.map((item) => (
+            <div key={item.number} className="services__item">
+              <span className="services__item-number">{item.number}</span>
+              <h3 className="services__item-title">{item.title}</h3>
+              <p className="services__item-description">{item.description}</p>
+              {item.extra && <p className="services__item-extra">{item.extra}</p>}
+            </div>
+          ))}
+        </div>
 
         <div className="works__grid">
           {selectedWorks.items.map((work, i) => (

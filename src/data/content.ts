@@ -35,7 +35,7 @@ export const hero = {
     'Cobertura em tempo real para casamentos, eventos e marcas que desejam transformar momentos reais em conteúdo memorável.',
   identity: ['AMANDA CRISTINA', 'STORYMAKER & VIDEOMAKER MOBILE', 'CAMPO GRANDE — MS'],
   primaryCta: { label: 'Solicitar orçamento' },
-  secondaryCta: { label: 'Ver portfólio', target: '#trabalhos' },
+  secondaryCta: { label: 'Ver serviços', target: '#trabalhos' },
 }
 
 export const statement = {

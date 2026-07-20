@@ -32,16 +32,10 @@
 }
 
 .works__grid {
-  margin-top: -9rem;
+  margin-top: 3.5rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.25rem;
-}
-
-@media (min-width: 640px) {
-  .works__grid {
-    margin-top: 0.1rem;
-  }
 }
 
 .works__item--wide .works__aspect,
