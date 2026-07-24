@@ -113,7 +113,8 @@ export const services = {
     {
       number: '04',
       title: '15 anos',
-      description: 'Cada detalhe da celebração, guardado para ser revivido para sempre.',
+      description:
+        'O dia em que uma menina se torna mulher, com todo brilho, emoção e sonhos de uma nova fase guardados para sempre.',
       extra: '',
       media: '/media/evento-01.mp4',
       poster: '/media/evento-01-poster.jpg',
