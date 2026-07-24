@@ -48,6 +48,7 @@ export const statement = {
 export interface SelectedWork {
   id: string
   video: string
+  poster: string
   layout: 'wide' | 'tall'
 }
 
@@ -57,12 +58,12 @@ export const selectedWorks = {
   emphasisWord: 'Contadas',
   subtext: '',
   items: [
-    { id: 'reel-01', video: '/media/portfolio/reel-01.mp4', layout: 'wide' },
-    { id: 'reel-02', video: '/media/portfolio/reel-02.mp4', layout: 'tall' },
-    { id: 'reel-03', video: '/media/portfolio/reel-03.mp4', layout: 'tall' },
-    { id: 'reel-04', video: '/media/portfolio/reel-04.mp4', layout: 'wide' },
-    { id: 'reel-05', video: '/media/portfolio/reel-05.mp4', layout: 'tall' },
-    { id: 'reel-06', video: '/media/portfolio/reel-06.mp4', layout: 'tall' },
+    { id: 'casal', video: '/media/portfolio/casal.mp4', poster: '/media/portfolio/casal-poster.jpg', layout: 'wide' },
+    { id: 'jantar-noivado', video: '/media/portfolio/jantar-noivado.mp4', poster: '/media/portfolio/jantar-noivado-poster.jpg', layout: 'tall' },
+    { id: 'madrinhas', video: '/media/portfolio/madrinhas.mp4', poster: '/media/portfolio/madrinhas-poster.jpg', layout: 'tall' },
+    { id: 'making-of-nathalia', video: '/media/portfolio/making-of-nathalia.mp4', poster: '/media/portfolio/making-of-nathalia-poster.jpg', layout: 'wide' },
+    { id: 'reel-05', video: '/media/portfolio/reel-05.mp4', poster: '/media/portfolio/reel-05-poster.jpg', layout: 'tall' },
+    { id: 'noivos', video: '/media/portfolio/noivos.mp4', poster: '/media/portfolio/noivos-poster.jpg', layout: 'tall' },
   ] as SelectedWork[],
 }
 
@@ -75,14 +76,10 @@ export interface ServiceItem {
   poster: string
 }
 
-export const portfolioReels = [
-  '/media/portfolio/reel-01.mp4',
-  '/media/portfolio/reel-02.mp4',
-  '/media/portfolio/reel-03.mp4',
-  '/media/portfolio/reel-04.mp4',
-  '/media/portfolio/reel-05.mp4',
-  '/media/portfolio/reel-06.mp4',
-]
+export const portfolioReels = selectedWorks.items.map((item) => ({
+  video: item.video,
+  poster: item.poster,
+}))
 
 export const services = {
   title: 'Cada história pede um olhar diferente.',
@@ -134,11 +131,18 @@ export interface AboutBadge {
 
 export const about = {
   portrait: '/media/amanda-retrato.jpg',
-  titleLine: 'Mais que registrar.',
-  emphasisWord: 'Contar uma história.',
+  titleLine: 'Quem',
+  emphasisWord: 'sou eu',
   paragraphs: [
-    'Sou Amanda Cristina, Storymaker e Videomaker Mobile em Campo Grande. Acompanho momentos reais com sensibilidade, agilidade e um olhar atento a tudo o que quase ninguém percebe.',
-    'Cada cobertura é feita de forma próxima, discreta e personalizada, respeitando a identidade de cada pessoa, evento ou marca.',
+    'Prazer, eu sou Amanda, Storymaker especializada em casamentos, 15 anos e celebrações especiais.',
+    'Minha história nessa profissão começou de um jeito muito pessoal.',
+    'Em outubro de 2024, minha mãe se casou e, depois do grande dia, ficou com a sensação de que o vídeo não conseguiu transmitir toda a emoção que ela viveu. Aquilo me fez perceber o quanto um registro pode influenciar a forma como lembramos dos momentos mais importantes da nossa vida.',
+    'Foi essa experiência que despertou em mim o desejo de fazer diferente.',
+    'Estudei, me preparei e, em julho de 2025, registrei meu primeiro casamento. Desde então, venho aperfeiçoando meu olhar para contar histórias de forma leve, espontânea e verdadeira.',
+    'Mais do que gravar vídeos, meu compromisso é fazer com que cada casal e cada debutante revivam a emoção do seu dia exatamente como ela aconteceu.',
+    'Meu diferencial está na proximidade com cada cliente, na atenção aos detalhes e na cobertura em tempo real, registrando cada sorriso, cada abraço e cada momento que muitas vezes passa despercebido. Não acredito em limitar memórias: quanto mais momentos especiais forem registrados, melhor será a lembrança que ficará para sempre.',
+    'Porque, no fim das contas, o que eu entrego não são apenas vídeos.',
+    'São lembranças que poderão ser revividas por muitos anos.',
   ],
   badges: [
     { icon: 'camera', label: 'Cobertura em tempo real' },

@@ -10,7 +10,7 @@ export function Hero() {
   return (
     <section id="inicio" className="hero" aria-label="Abertura">
       <div className="hero__media">
-        {hero.videos.map((src) => (
+        {hero.videos.map((src, i) => (
           <video
             key={src}
             className="hero__video"
@@ -18,8 +18,10 @@ export function Hero() {
             muted
             loop
             playsInline
-            preload="metadata"
+            preload="auto"
+            poster={hero.poster}
             aria-hidden="true"
+            {...(i === 0 ? { fetchPriority: 'high' as const } : {})}
           >
             <source src={src} type="video/mp4" />
           </video>

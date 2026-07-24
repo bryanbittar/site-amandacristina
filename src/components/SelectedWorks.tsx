@@ -1,5 +1,6 @@
 import { lazy, Suspense, useRef, useState } from 'react'
 import { Reveal } from './Reveal'
+import { LazyVideo } from './LazyVideo'
 import { selectedWorks, services } from '../data/content'
 import './selected-works.css'
 import './services.css'
@@ -45,18 +46,13 @@ export function SelectedWorks() {
                 aria-label="Assistir vídeo em tela maior, com som"
               >
                 <span className="aspect-box works__aspect">
-                  <video
-                    ref={(el) => {
+                  <LazyVideo
+                    videoRef={(el) => {
                       videoRefs.current[i] = el
                     }}
                     className="works__video"
                     src={work.video}
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
-                    aria-hidden="true"
+                    poster={work.poster}
                   />
                   <span className="works__scrim" aria-hidden="true" />
                   <span className="works__play" aria-hidden="true" />

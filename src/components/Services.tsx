@@ -1,5 +1,6 @@
 import { lazy, Suspense, useRef, useState } from 'react'
 import { Reveal } from './Reveal'
+import { LazyVideo } from './LazyVideo'
 import { portfolioReels } from '../data/content'
 import './services.css'
 
@@ -13,28 +14,23 @@ export function Services() {
     <section id="servicos" className="services" aria-label="Portfólio em vídeo">
       <div className="container">
         <div className="services__reels-grid">
-          {portfolioReels.map((src, i) => (
-            <Reveal key={src} delay={i * 0.08} className="services__reel-item">
+          {portfolioReels.map((reel, i) => (
+            <Reveal key={reel.video} delay={i * 0.08} className="services__reel-item">
               <button
                 className="services__reel-btn"
                 onClick={() => {
                   videoRefs.current[i]?.pause()
-                  setActiveReel(src)
+                  setActiveReel(reel.video)
                 }}
                 aria-label="Assistir vídeo em tela maior, com som"
               >
-                <video
-                  ref={(el) => {
+                <LazyVideo
+                  videoRef={(el) => {
                     videoRefs.current[i] = el
                   }}
                   className="services__reel-video"
-                  src={src}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                  aria-hidden="true"
+                  src={reel.video}
+                  poster={reel.poster}
                 />
               </button>
             </Reveal>

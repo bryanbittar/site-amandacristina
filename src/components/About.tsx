@@ -54,15 +54,6 @@ export function About() {
             </Reveal>
           ))}
 
-          <Reveal delay={0.3} className="about__badges">
-            {about.badges.map((badge) => (
-              <div key={badge.label} className="about__badge">
-                <span className="about__badge-icon">{icons[badge.icon]}</span>
-                <span>{badge.label}</span>
-              </div>
-            ))}
-          </Reveal>
-
           <Reveal delay={0.4}>
             <hr className="hairline about__divider" />
             <a
