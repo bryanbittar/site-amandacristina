@@ -1,4 +1,5 @@
 import { lazy, Suspense, useRef, useState } from 'react'
+import { Play } from 'lucide-react'
 import { Reveal } from './Reveal'
 import { LazyVideo } from './LazyVideo'
 import { selectedWorks, services } from '../data/content'
@@ -55,7 +56,9 @@ export function SelectedWorks() {
                     poster={work.poster}
                   />
                   <span className="works__scrim" aria-hidden="true" />
-                  <span className="works__play" aria-hidden="true" />
+                  <span className="works__play" aria-hidden="true">
+                    <Play size={22} fill="currentColor" />
+                  </span>
                 </span>
               </button>
             </Reveal>

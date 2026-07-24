@@ -1,4 +1,5 @@
 import { lazy, Suspense, useRef, useState } from 'react'
+import { Play } from 'lucide-react'
 import { Reveal } from './Reveal'
 import { LazyVideo } from './LazyVideo'
 import { portfolioReels } from '../data/content'
@@ -32,6 +33,9 @@ export function Services() {
                   src={reel.video}
                   poster={reel.poster}
                 />
+                <span className="services__reel-play" aria-hidden="true">
+                  <Play size={20} fill="currentColor" />
+                </span>
               </button>
             </Reveal>
           ))}

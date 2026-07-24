@@ -64,6 +64,9 @@ export const selectedWorks = {
     { id: 'making-of-nathalia', video: '/media/portfolio/making-of-nathalia.mp4', poster: '/media/portfolio/making-of-nathalia-poster.jpg', layout: 'wide' },
     { id: 'reel-05', video: '/media/portfolio/reel-05.mp4', poster: '/media/portfolio/reel-05-poster.jpg', layout: 'tall' },
     { id: 'noivos', video: '/media/portfolio/noivos.mp4', poster: '/media/portfolio/noivos-poster.jpg', layout: 'tall' },
+    { id: 'quinze-anos', video: '/media/portfolio/quinze-anos.mp4', poster: '/media/portfolio/quinze-anos-poster.jpg', layout: 'tall' },
+    { id: 'noivado', video: '/media/portfolio/noivado.mp4', poster: '/media/portfolio/noivado-poster.jpg', layout: 'tall' },
+    { id: 'batizado-joaquim', video: '/media/portfolio/batizado-joaquim.mp4', poster: '/media/portfolio/batizado-joaquim-poster.jpg', layout: 'wide' },
   ] as SelectedWork[],
 }
 
